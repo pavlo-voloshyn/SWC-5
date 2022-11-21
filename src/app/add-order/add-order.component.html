@@ -1,0 +1,37 @@
+
+<mat-card>
+  <mat-card-header>Add Order</mat-card-header>
+  <mat-card-content>
+    <div>
+    <mat-form-field>
+      <mat-label>Service</mat-label>
+      <input type="number" [(ngModel)]="order.serviceType" matInput
+            >
+    </mat-form-field>
+  </div>
+    <div>
+    <mat-form-field>
+      <mat-label>Status </mat-label>
+      <input type="number" [(ngModel)]="order.status"  matInput>
+    </mat-form-field>
+  </div>
+  <div>
+      <mat-checkbox [(ngModel)]="order.isUrgent"
+            > Is Urgent</mat-checkbox>
+  </div>
+    <div>
+    <mat-form-field>
+      <mat-label>Passport Id</mat-label>
+      <input  [(ngModel)]="order.passportId"  matInput>
+    </mat-form-field>
+  </div>
+  <div>
+    <button (click)="onCreate()" mat-raised-button color="primary">
+      Create
+    </button>
+  </div>
+  <div class="error-sec" *ngIf="!(errorMes === '')">
+    <p>{{errorMes}}</p>
+  </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>Login</mat-card-header>
+  <mat-card-content>
+    <div>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input type="email" [(ngModel)]="username"  matInput
+             placeholder="user@example.com">
+    </mat-form-field>
+  </div>
+    <div>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input type="password" [(ngModel)]="password"  matInput>
+    </mat-form-field>
+  </div>
+  <div>
+    <button (click)="onLogin()" mat-raised-button color="primary">
+      Login
+    </button>
+  </div>
+  <div class="error-sec" *ngIf="!(errorMes === '')">
+    <p>{{errorMes}}</p>
+  </div>
+  </mat-card-content>
+</mat-card>

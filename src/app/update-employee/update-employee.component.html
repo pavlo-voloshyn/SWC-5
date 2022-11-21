@@ -1,0 +1,40 @@
+
+<mat-card>
+  <mat-card-header>Update Employee</mat-card-header>
+  <mat-card-content>
+    <div>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input [(ngModel)]="employee.firstName" matInput
+            >
+    </mat-form-field>
+  </div>
+    <div>
+    <mat-form-field>
+      <mat-label>Surname </mat-label>
+      <input  [(ngModel)]="employee.surname"  matInput>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Role</mat-label>
+      <input type="number" [(ngModel)]="employee.role" matInput
+            >
+    </mat-form-field>
+  </div>
+    <div>
+    <mat-form-field>
+      <mat-label>Office</mat-label>
+      <input  [(ngModel)]="employee.office"  matInput>
+    </mat-form-field>
+  </div>
+  <div>
+    <button (click)="onUpdate()" mat-raised-button color="primary">
+      Update
+    </button>
+  </div>
+  <div class="error-sec" *ngIf="!(errorMes === '')">
+    <p>{{errorMes}}</p>
+  </div>
+  </mat-card-content>
+</mat-card>
